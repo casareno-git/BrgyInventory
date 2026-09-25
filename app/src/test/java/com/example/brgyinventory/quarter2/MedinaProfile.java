@@ -12,7 +12,7 @@ public class MedinaProfile {
         System.out.println(" Welcome to my Introduction! ");
         System.out.println("Hi! My Name Is " + myName + ", and i am " + myAge + " years old ");
         System.out.println("And I Have A Dog Named " + petName + ".");
-        System.out.println("And The Food I Want To Eat Is " + favFood + "24/7");
+        System.out.println("And The Food I Want To Eat Is " + favFood + "For Sure");
     }
 
 }
