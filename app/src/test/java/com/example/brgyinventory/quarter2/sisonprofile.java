@@ -6,7 +6,7 @@ public class sisonprofile
     @Test
     public void printMyProfile() {
         String myName = "Jake";
-        String petName = "marshal";
+        String petName = "marshals";
         String favFood = "adobo";
         int myAge = 18;
 
