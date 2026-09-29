@@ -1,12 +1,11 @@
 package com.example.brgyinventory.quarter2.practical;
 
 import org.junit.Test;
-
 import java.util.Scanner;
 
 public class MainMenu {
-
-    public void Menu(Scanner scanner) {
+    public void menu() {
+        Scanner input = new Scanner(System.in);
 
         System.out.println("----- MAIN MENU -----");
         System.out.println("1. Log-in Page");
@@ -16,7 +15,7 @@ public class MainMenu {
 
         System.out.print("Enter your choice: ");
 
-        int choice = scanner.nextInt();
+        int choice = input.nextInt();
 
         switch (choice) {
             case 1:
@@ -37,6 +36,7 @@ public class MainMenu {
 
             default:
                 System.out.println("Invalid choice.");
+                break;
         }
     }
 }

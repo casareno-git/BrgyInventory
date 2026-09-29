@@ -1,9 +1,10 @@
 package com.example.brgyinventory.quarter2.practical;
 
 import java.util.Scanner;
+import org.junit.Test;
 
 public class Login {
-
+@Test
     public static boolean authenticate(String username, String password) {
         String correctUsername = "anselm123";
         String correctPassword = "canterbury123";
