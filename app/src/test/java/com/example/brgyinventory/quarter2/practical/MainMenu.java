@@ -32,7 +32,7 @@ public class MainMenu {
                 break;
 
             case 4:
-                System.out.println("Exiting system...");
+                System.out.println("Exiting system....");
                 break;
 
             default:
