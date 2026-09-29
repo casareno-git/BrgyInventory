@@ -28,7 +28,7 @@ public class MainMenu {
                 break;
 
             case 3:
-                System.out.println("Opening Borrowing Form Status...");
+                System.out.println("Opening Borrowing Form Status....");
                 break;
 
             case 4:
