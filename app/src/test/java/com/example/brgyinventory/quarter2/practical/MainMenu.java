@@ -23,7 +23,7 @@ public class MainMenu {
                 break;
 
             case 2:
-                System.out.println("Opening Borrowing Page...");
+                System.out.println("Opening Borrowing Page....");
                 break;
 
             case 3:
