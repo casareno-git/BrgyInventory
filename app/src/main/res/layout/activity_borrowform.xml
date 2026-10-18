@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".borrowform">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/borrowtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Borrowing:"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/itemnametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/borrowqty"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:autofillHints="username"
+            android:background="@drawable/input_background"
+            android:hint="Amount to borrow"
+            android:inputType="number"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/borrowdate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:autofillHints="username"
+            android:background="@drawable/input_background"
+            android:hint="Date to borrow"
+            android:inputType="date"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/borrowreturndate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:autofillHints="username"
+            android:background="@drawable/input_background"
+            android:hint="Date to return item"
+            android:inputType="date"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/borrowreason"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:autofillHints="username"
+            android:background="@drawable/input_background"
+            android:hint="Reason for borrowing"
+            android:inputType="text"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/borrowsubmitbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit request" />
+
+        <Button
+            android:id="@+id/borrowcancelbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="Cancel request" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
