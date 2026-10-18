@@ -12,7 +12,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="527dp"
-        android:layout_height="831dp"
         android:background="#828BB8"
         android:backgroundTint="#244557"
         android:orientation="vertical"
