@@ -29,6 +29,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    sourceSets {
+        getByName("main") {
+            java {
+                srcDirs("src\\main\\java", "src\\main\\java")
+            }
+        }
+    }
 }
 
 dependencies {
