@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="20dp"
-            android:text="BRGYINVENTORY  •  VERSION 1.0"
+            android:text="BRGYINVENTORY  •  VERSION 2.0"
             android:textColor="#8296B0"
             android:textSize="10sp" />
 
