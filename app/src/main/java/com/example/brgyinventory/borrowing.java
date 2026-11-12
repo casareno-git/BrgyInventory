@@ -1,6 +1,9 @@
 package com.example.brgyinventory;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,34 @@ public class borrowing extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // btn declarations
+        Button borrowbtn = findViewById(R.id.borrowbtn);
+        Button borrowbtn2 = findViewById(R.id.borrowbtn2);
+        Button borrowbtn3 = findViewById(R.id.borrowbtn3);
+
+        // intents
+        final Intent borrowintent = new Intent(borrowing.this, borrowform.class);
+
+        // borrow btn actions
+        borrowbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(borrowintent);
+            }
+        });
+        borrowbtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(borrowintent);
+            }
+        });
+        borrowbtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(borrowintent);
+            }
         });
     }
 }
