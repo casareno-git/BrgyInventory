@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class borrowform extends AppCompatActivity {
+
+    EditText qtyinput;
+    EditText dateinput;
+    EditText returndateinput;
+    EditText reasoninput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,29 +32,44 @@ public class borrowform extends AppCompatActivity {
             return insets;
         });
 
-        // btn declarations
+        // declarations
         Button borrowsubmitbtn = findViewById(R.id.borrowsubmitbtn);
         Button borrowcancelbtn = findViewById(R.id.borrowcancelbtn);
+        qtyinput = (EditText) findViewById(R.id.borrowqty);
+        dateinput = (EditText) findViewById(R.id.borrowdate);
+        returndateinput = (EditText) findViewById(R.id.borrowreturndate);
+        reasoninput = (EditText) findViewById(R.id.borrowreason);
 
         // toast-related declarations
         Context context = getApplicationContext();
         String submittxt = "Request submitted.";
         String canceltxt = "Request cancelled.";
+        String emptytxt = "Please answer all fields.";
         int toastduration = Toast.LENGTH_SHORT;
 
         Toast submittoast = Toast.makeText(context, submittxt, toastduration);
         Toast canceltoast = Toast.makeText(context, canceltxt, toastduration);
+        Toast emptytoast = Toast.makeText(context, emptytxt, toastduration);
 
-        // intents for navigation
-        final Intent submitintent = new Intent(borrowform.this, borrowing.class);
-        final Intent cancelintent = new Intent(borrowform.this, borrowing.class);
+        // intent for navigation
+        final Intent finishintent = new Intent(borrowform.this, borrowing.class);
 
         // submit btn actions
         borrowsubmitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                submittoast.show();
-                startActivity(submitintent);
+                String borrowqty = qtyinput.getText().toString();
+                String borrowdate = dateinput.getText().toString();
+                String borrowreturndate = returndateinput.getText().toString();
+                String borrowreason = reasoninput.getText().toString();
+
+                // check if fields are empty
+                if (borrowqty.isEmpty() || borrowdate.isEmpty() || borrowreturndate.isEmpty() || borrowreason.isEmpty()) {
+                    emptytoast.show();
+                } else {
+                    submittoast.show();
+                    startActivity(finishintent);
+                }
             }
         });
 
@@ -57,7 +78,7 @@ public class borrowform extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 canceltoast.show();
-                startActivity(cancelintent);
+                startActivity(finishintent);
             }
         });
 

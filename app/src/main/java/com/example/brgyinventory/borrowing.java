@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class borrowing extends AppCompatActivity {
+
+    ImageButton backbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +28,22 @@ public class borrowing extends AppCompatActivity {
         });
 
         // btn declarations
+        backbtn = findViewById(R.id.backbtn);
         Button borrowbtn = findViewById(R.id.borrowbtn);
         Button borrowbtn2 = findViewById(R.id.borrowbtn2);
         Button borrowbtn3 = findViewById(R.id.borrowbtn3);
 
         // intents
+        final Intent backintent = new Intent (borrowing.this, dashboard.class);
         final Intent borrowintent = new Intent(borrowing.this, borrowform.class);
 
-        // borrow btn actions
+        // btn actions
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(backintent);
+            }
+        });
         borrowbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
