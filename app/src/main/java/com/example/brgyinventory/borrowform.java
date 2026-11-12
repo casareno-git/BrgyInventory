@@ -1,6 +1,11 @@
 package com.example.brgyinventory;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +25,40 @@ public class borrowform extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // btn declarations
+        Context context = getApplicationContext();
+        Button borrowsubmitbtn = findViewById(R.id.borrowsubmitbtn);
+        Button borrowcancelbtn = findViewById(R.id.borrowcancelbtn);
+
+        // toast-related declarations
+        String submittxt = "Request submitted.";
+        String canceltxt = "Request cancelled.";
+
+        int toastduration = Toast.LENGTH_SHORT;
+        Toast submittoast = Toast.makeText(context, submittxt, toastduration);
+        Toast canceltoast = Toast.makeText(context, canceltxt, toastduration);
+
+        // intents for btns
+        final Intent submitintent = new Intent(borrowform.this, borrowing.class);
+        final Intent cancelintent = new Intent(borrowform.this, borrowing.class);
+
+        // submit btn actions
+        borrowsubmitbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submittoast.show();
+                startActivity(submitintent);
+            }
+        });
+        // cancel btn actions
+        borrowcancelbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                canceltoast.show();
+                startActivity(cancelintent);
+            }
+        });
+
     }
 }
