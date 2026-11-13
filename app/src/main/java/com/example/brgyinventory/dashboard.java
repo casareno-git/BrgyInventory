@@ -1,24 +1,43 @@
+
 package com.example.brgyinventory;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_dashboard);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // CONNECT BUTTONS
+        Button btnProfile = findViewById(R.id.btnProfile);
+        Button btnBorrowing = findViewById(R.id.btnBorrowing);
+        Button btnStatus = findViewById(R.id.btnStatus);
+
+        // PROFILE BUTTON
+        btnProfile.setOnClickListener(v -> {
+            Toast.makeText(this,
+                    "Profile page is not yet available",
+                    Toast.LENGTH_SHORT).show();
+        });
+
+        // BORROWING PAGE BUTTON
+        btnBorrowing.setOnClickListener(v -> {
+            Intent intent = new Intent(dashboard.this, borrowing.class);
+            startActivity(intent);
+        });
+
+        // BORROWING STATUS BUTTON
+        btnStatus.setOnClickListener(v -> {
+            Intent intent = new Intent(dashboard.this, borrowform.class);
+            startActivity(intent);
         });
     }
 }

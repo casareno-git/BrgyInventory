@@ -1,150 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".BorrowerdetailsActivity"
-    tools:visibility="visible">
+    android:background="#F7F6FC"
+    android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="556dp"
-        android:layout_height="831dp"
-        android:layout_marginStart="16dp"
-        android:background="#829BB8"
-        android:backgroundTint="#FFFFFF"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-1dp"
-        tools:visibility="visible">
+        android:padding="24dp">
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="400dp"
-            android:layout_height="38dp"
-            android:background="#F4EDED"
-            android:backgroundTint="#E4DBDB"
-            android:textColor="#FFFFFF"
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BrgyInventory"
+            android:textColor="#5426A8"
+            android:textSize="27sp"
             android:textStyle="bold"
-            app:iconTint="#FBFBFB"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.416"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.377"
-            tools:text="1. Profile" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="431dp"
-            android:layout_height="209dp"
-            android:src="@drawable/_847661961149339373"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.048"
-            tools:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="48dp"
-            android:layout_height="55dp"
-            android:src="@drawable/_966162926351343662_removebg_preview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.001"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.375" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="48dp"
-            android:layout_height="55dp"
-            android:src="@drawable/autumn_book_cozy_cartoon_drawing_illustration_fall__removebg_preview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.001"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.484" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="49dp"
-            android:layout_height="59dp"
-            android:src="@drawable/form_flat_icon_removebg_preview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.591" />
-
-        <Button
-            android:id="@+id/borrow"
-            android:layout_width="400dp"
-            android:layout_height="39dp"
-            android:text="2. Borrowing Page"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.416"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.473" />
-
-        <Button
-            android:id="@+id/borrowform"
-            android:layout_width="399dp"
-            android:layout_height="39dp"
-            android:text="3. Borrowing Form Status"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.42"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.59" />
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="167dp"
-            android:layout_height="22dp"
-            android:text="Borrower. Read. Grow"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.257" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BORROW • READ • GROW"
+            android:textColor="#88839A"
+            android:textSize="12sp"
+            android:letterSpacing="0.15"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <!-- LOGO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📚"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_marginTop="35dp"/>
+
+        <!-- WELCOME -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#29223D"
+            android:gravity="center"/>
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="109dp"
-            android:layout_height="22dp"
-            android:background="#2196F3"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Main Menu"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.053" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What would you like to do today?"
+            android:textSize="14sp"
+            android:textColor="#898497"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- PROFILE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_dashboard_card"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="👤"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="#EEE6FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#29223D"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View your personal information"
+                    android:textSize="12sp"
+                    android:textColor="#898497"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:text="OPEN"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6429D9"/>
+        </LinearLayout>
+
+        <!-- BORROWING PAGE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_dashboard_card"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="📖"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="#EEE6FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrowing Page"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#29223D"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrow available inventory items"
+                    android:textSize="12sp"
+                    android:textColor="#898497"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBorrowing"
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:text="OPEN"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6429D9"/>
+        </LinearLayout>
+
+        <!-- BORROWING STATUS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_dashboard_card"
+            android:elevation="3dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="📋"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="#EEE6FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrowing Status"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#29223D"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your borrowing requests"
+                    android:textSize="12sp"
+                    android:textColor="#898497"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnStatus"
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:text="OPEN"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6429D9"/>
+        </LinearLayout>
+
+        <!-- FOOTER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BrgyInventory Management System"
+            android:textColor="#A39DB1"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+</ScrollView>
